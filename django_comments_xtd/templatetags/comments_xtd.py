@@ -477,7 +477,7 @@ class GetCommentBoxPropsNode(Node):
             }
         }
         user = context.get('user', None)
-        if user and user.is_authenticated():
+        if user and user.is_authenticated:
             d['current_user'] = "%d:%s" % (
                 user.pk, settings.COMMENTS_XTD_API_USER_REPR(user))
             d['is_authenticated'] = True
