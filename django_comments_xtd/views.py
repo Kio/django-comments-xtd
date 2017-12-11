@@ -100,7 +100,7 @@ def on_comment_was_posted(sender, comment, request, **kwargs):
         return False
     if (
             not settings.COMMENTS_XTD_CONFIRM_EMAIL or
-            (comment.user and comment.user.is_authenticated
+            (comment.user and comment.user.is_authenticated)
     ):
         if not _comment_exists(comment):
             new_comment = _create_comment(comment)
